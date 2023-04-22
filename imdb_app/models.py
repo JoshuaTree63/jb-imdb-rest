@@ -11,8 +11,7 @@ from imdb_app.validators import validate_year_before_now
 class Actor(models.Model):
     name = models.CharField(max_length=256, db_column='name', null=False, blank=False)
     birth_year = models.IntegerField(
-        db_column='birth_year', null=True
-    )
+        db_column='birth_year', null=True)
 
     def __str__(self):
         return self.name
@@ -63,3 +62,5 @@ class MovieActor(models.Model):
         db_table = 'movie_actors'
 
 
+class Oscar(models.Model):
+    pass
